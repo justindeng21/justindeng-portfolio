@@ -1,0 +1,368 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #f5f5f5;
+  background: #0a0a0a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #0a0a0a;
+  color: #f5f5f5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site {
+  min-height: 100vh;
+}
+
+/* =========================
+   Navigation
+   ========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid #252525;
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  color: #b5b5b5;
+  font-size: 0.9rem;
+}
+
+.nav-links a {
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   Hero
+   ========================= */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 140px 24px 100px;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 20px 0 28px;
+  color: #ffffff;
+  font-size: clamp(3.2rem, 7vw, 6rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.hero-description {
+  max-width: 680px;
+  margin: 0;
+  color: #c4c4c4;
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button.primary {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+.button.primary:hover {
+  background: #d4d4d4;
+}
+
+.button.secondary {
+  border: 1px solid #444444;
+  color: #ffffff;
+}
+
+.button.secondary:hover {
+  background: #1a1a1a;
+  border-color: #666666;
+}
+
+/* =========================
+   Sections
+   ========================= */
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 24px;
+  border-top: 2px solid #252525;
+}
+
+.section-label {
+  margin: 0;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.section h2 {
+  max-width: 800px;
+  margin: 18px 0 24px;
+  color: #ffffff;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 750;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.section-description {
+  max-width: 700px;
+  margin: 0;
+  color: #b5b5b5;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   Professional Work
+   ========================= */
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 60px;
+}
+
+.card {
+  padding: 28px;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  background: #111111;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: #444444;
+  transform: translateY(-10px);
+}
+
+.card-number {
+  color: #737373;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.card h3 {
+  margin: 50px 0 12px;
+  color: #ffffff;
+  font-size: 1.15rem;
+}
+
+.card p {
+  margin: 0;
+  color: #a3a3a3;
+  line-height: 1.7;
+}
+
+/* =========================
+   About
+   ========================= */
+
+.about {
+  padding-bottom: 140px;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Contact
+   ========================= */
+
+.contact {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 24px;
+}
+
+.contact h2 {
+  margin: 18px 0;
+  color: #ffffff;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.contact p:not(.section-label) {
+  margin-bottom: 30px;
+  color: #b5b5b5;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 24px;
+  border-top: 1px solid #252525;
+  display: flex;
+  justify-content: space-between;
+  color: #737373;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: #a3a3a3;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding-top: 120px;
+  }
+
+  .hero h1 {
+    font-size: 3.4rem;
+    line-height: 1.05;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    flex-direction: column;
+  }
+
+  .technologies {
+    justify-content: flex-start;
+    min-width: 0;
+  }
+
+  .section {
+    padding: 90px 24px;
+  }
+
+  .section h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact {
+    padding: 90px 24px;
+  }
+
+  footer {
+    padding: 24px;
+  }
+}
